@@ -4,7 +4,14 @@
 namespace Exerciese {
   public class Exercises {
     public static void Main() {
-      Console.WriteLine(HasUniqueCharacters("Testt"));
+      Console.WriteLine("Algorithm that determines if a string has unique ASCII characters");
+      Console.Write("Enter your string: ");
+      string sentence = Console.ReadLine() ?? "";
+      if (sentence == null) {
+        Console.WriteLine("Not a valid sentence");
+        return;
+      }
+      Console.WriteLine(HasUniqueCharacters(sentence));
     }
 
     public static bool HasUniqueCharacters(string sentence) {
